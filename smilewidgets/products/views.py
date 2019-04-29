@@ -2,12 +2,18 @@ from django.shortcuts import render
 from .models import Product,ProductPrice,GiftCard,format_amount
 from datetime import datetime
 from django.http import JsonResponse
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework.decorators import api_view
 
-def getprice(request, productCode, date):
-    giftCardCode = request.GET.get('giftCardCode')
+@api_view(['GET'])
+def getprice(request):
     success = False
     response = {}
     try:
+        productCode = request.GET['productCode']
+        date = request.GET['date']
+        giftCardCode = request.GET.get('giftCardCode')
         date = datetime.strptime(date, "%Y-%m-%d").date()
         product_object = Product.objects.get(code=productCode)
         product_price = product_object.get_special_price(date) #checks and return the specialprice if available in the current date else return price
@@ -26,7 +32,7 @@ def getprice(request, productCode, date):
         response['message'] = str(e)
 
 
-    return JsonResponse({
+    return Response({
         'success' : success,
         'data' : response
         })

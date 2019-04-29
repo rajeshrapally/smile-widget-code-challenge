@@ -43,26 +43,26 @@ The Smile Widget Company currently sells two types of smile widgets: a Big Widge
 * Run server
 * open the following urls to see the functionality of ProductPrice
     * big widget without any offer
-      * http://127.0.0.1:8000/api/get-price/big_widget/2018-11-20/
+      * http://127.0.0.1:8000/api/get-price/?productCode=big_widget&date=2018-11-20
     * big widget with Black Friday offer
-      * http://127.0.0.1:8000/api/get-price/big_widget/2018-11-23/
-      * http://127.0.0.1:8000/api/get-price/big_widget/2018-11-24/
+      * http://127.0.0.1:8000/api/get-price/?productCode=big_widget&date=2018-11-23
+      * http://127.0.0.1:8000/api/get-price/?productCode=big_widget&date=2018-11-24
     * big widget with 2019 Prices
-      * http://127.0.0.1:8000/api/get-price/big_widget/2019-05-20/
+      * http://127.0.0.1:8000/api/get-price/?productCode=big_widget&date=2019-05-20
 
     * Small Widget without any offer
-      * http://127.0.0.1:8000/api/get-price/sm_widget/2018-11-20/
+      * http://127.0.0.1:8000/api/get-price/?productCode=sm_widget&date=2018-11-20
     * Small Widget with Black Friday offer
-      * http://127.0.0.1:8000/api/get-price/sm_widget/2018-11-23/
-      * http://127.0.0.1:8000/api/get-price/sm_widget/2018-11-24/
+      * http://127.0.0.1:8000/api/get-price/?productCode=sm_widget&date=2018-11-23
+      * http://127.0.0.1:8000/api/get-price/?productCode=sm_widget&date=2018-11-24
     * Small Widget with 2019 Prices
-      * http://127.0.0.1:8000/api/get-price/sm_widget/2019-05-20/
+      * http://127.0.0.1:8000/api/get-price/?productCode=sm_widget&date=2019-05-20
 
 * open the following urls to see the functionality of giftCardCode
     * big widget with 250OFF
-      * http://127.0.0.1:8000/api/get-price/big_widget/2018-12-01/?giftCardCode=250OFF
+      * http://127.0.0.1:8000/api/get-price/?productCode=big_widget&date=2018-12-01&giftCardCode=250OFF
     * Small Widget with 250OFF
-      * http://127.0.0.1:8000/api/get-price/sm_widget/2018-12-01/?giftCardCode=250OFF
+      * http://127.0.0.1:8000/api/get-price/?productCode=sm_widget&date=2018-12-01&giftCardCode=250OFF
 
 * you can try different combinations
 * also can apply giftcard code to the discount prices but be clear the dates are matched in both GiftCard and ProductPrice tables 
